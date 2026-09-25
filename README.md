@@ -8,6 +8,7 @@ This is a static HTML/CSS/JavaScript portfolio. `index.html` is the main page, s
 - `portfolio_website.html` — redirect from the previous file path
 - `assets/css/styles.css` — layout, responsive styles, and animations
 - `assets/js/main.js` — interactions, scroll effects, and image lightbox
+- `assets/js/i18n.js` — English/Thai text and image descriptions; English is the default and the selected language is saved locally
 - `assets/images/` — images grouped by project/category
 
 The original `Profile/`, `Project_Mock_up/`, and two root iPhone images are retained locally but ignored by Git. The page uses the categorized copies in `assets/images/` only. Do not upload those original folders manually if you want the published repository to stay tidy.

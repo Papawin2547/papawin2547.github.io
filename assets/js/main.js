@@ -32,7 +32,7 @@ buttons.forEach(button => {
 // เปลี่ยนรูปจากขาวดำเป็นสีเมื่อส่วนผลงานเลื่อนเข้ามาในหน้าจอ
 // -----------------------------------------------------------
 const imageColorRevealTargets = document.querySelectorAll(
-    '.about-container, .works-grid, .project-details, .physical-brand-content-grid, .game-design-project, .modeling-project, .graphic-design-project, .activity'
+    '.about-container, .works-grid, .project-details, .physical-brand-content-grid, .game-design-project, .modeling-project, .graphic-design-project, .graphic-design-media, .activity'
 );
 
 if ('IntersectionObserver' in window) {

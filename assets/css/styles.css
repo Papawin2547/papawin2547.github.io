@@ -113,6 +113,49 @@ header nav a:hover {
     transform: translateY(-2px);
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.language-switch {
+    display: inline-flex;
+    flex: none;
+    padding: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.language-switch button {
+    min-width: 36px;
+    min-height: 32px;
+    padding: 3px 7px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #fff;
+    font: 700 0.75rem var(--font-sans);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.language-switch button:hover,
+.language-switch button[aria-pressed="true"] {
+    opacity: 1;
+}
+
+.language-switch button[aria-pressed="true"] {
+    background: var(--accent-color);
+}
+
+.language-switch button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 /* -----------------------------------------------------------
    Hero Section & Moving Wave
 ----------------------------------------------------------- */
@@ -1742,9 +1785,18 @@ header nav a:hover {
     transition: filter 0.5s ease, transform 0.5s ease;
 }
 
-.graphic-design-project.is-in-view .graphic-design-media img {
-    filter: grayscale(0%);
-    transform: scale(1.03);
+@media (min-width: 769px) {
+    .graphic-design-project.is-in-view .graphic-design-media img {
+        filter: grayscale(0%);
+        transform: scale(1.03);
+    }
+}
+
+@media (max-width: 768px) {
+    .graphic-design-media.is-in-view img {
+        filter: grayscale(0%);
+        transform: scale(1.03);
+    }
 }
 
 .project-details.learninghaus-project {
@@ -2184,6 +2236,28 @@ footer p.footer-desc {
     .project-details.reverse { direction: ltr; } /* ยกเลิกสลับฝั่งในมือถือ */
     .about-image-wrapper { order: -1; margin-bottom: 10px; } /* เอารูปขึ้นก่อนข้อความในหน้า About */
     .project-media { order: -1; } /* เอารูปขึ้นก่อนข้อความในหน้า Project */
+}
+
+@media (max-width: 600px) {
+    header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: 5px;
+    }
+
+    .header-actions { display: contents; }
+    header .logo-container { grid-column: 1; grid-row: 1; }
+    header .logo { font-size: 0.95rem; }
+    header .subtitle { font-size: 0.65rem; }
+    header nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    header nav a { margin-left: 0; font-size: 0.8rem; }
+    .language-switch { grid-column: 2; grid-row: 1; align-self: center; }
 }
 
 @media (max-width: 480px) {
