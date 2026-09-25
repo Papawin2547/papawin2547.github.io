@@ -1742,14 +1742,14 @@ header nav a:hover {
     transition: filter 0.5s ease, transform 0.5s ease;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1920px) {
     .graphic-design-project.is-in-view .graphic-design-media img {
         filter: grayscale(0%);
         transform: scale(1.03);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1919px) {
     .graphic-design-media.is-in-view img {
         filter: grayscale(0%);
         transform: scale(1.03);
@@ -2082,7 +2082,7 @@ footer p.footer-desc {
     .graphic-design-gallery { gap: 24px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1919px) {
     .section { padding: 80px 5%; }
     header { padding: 15px 5%; }
     header nav a { margin-left: 15px; font-size: 0.85rem; }
@@ -2193,6 +2193,47 @@ footer p.footer-desc {
     .project-details.reverse { direction: ltr; } /* ยกเลิกสลับฝั่งในมือถือ */
     .about-image-wrapper { order: -1; margin-bottom: 10px; } /* เอารูปขึ้นก่อนข้อความในหน้า About */
     .project-media { order: -1; } /* เอารูปขึ้นก่อนข้อความในหน้า Project */
+
+    /* Keep phone-style stacking on every sub-Full-HD screen without shrinking media to phone width. */
+    .activity-row,
+    .game-design-row,
+    .modeling-row,
+    .graphic-design-row {
+        max-width: 1200px;
+    }
+
+    .activity .activity-media,
+    .activity-content {
+        max-width: min(100%, 760px);
+    }
+
+    .physical-brand-content-grid,
+    .physical-brand-copy-grid {
+        max-width: 1200px;
+    }
+
+    .project-details .project-media,
+    .game-design-row .game-design-media,
+    .modeling-row .modeling-media,
+    .physical-brand-content-grid .physical-brand-gallery,
+    .graphic-design-gallery,
+    .graphic-design-din-row .graphic-design-gallery,
+    .graphic-design-sweets-row .graphic-design-gallery {
+        max-width: min(100%, 960px);
+    }
+
+    .game-design-media img,
+    .modeling-media img {
+        max-width: 100%;
+        max-height: 600px;
+    }
+
+    .graphic-design-description,
+    .graphic-design-details-column,
+    .graphic-design-maejo-copy,
+    .graphic-design-media {
+        max-width: min(100%, 960px);
+    }
 }
 
 @media (max-width: 480px) {
