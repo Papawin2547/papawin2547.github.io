@@ -1,0 +1,15 @@
+# Keep the original, unoptimized image collections locally.
+# The website uses only the categorized copies under assets/images/.
+/Profile/
+/Project_Mock_up/
+/iPhone 16 - 1.1.png
+/iPhone 16 - 1.2.png
+
+# Local and private files must not be published.
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
